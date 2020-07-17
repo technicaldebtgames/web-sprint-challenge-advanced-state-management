@@ -35,11 +35,10 @@ export const reducer = (state = initialState, action) => {
                 ...state
             }
         case ADD_SMURF_SUCCESS:
-            console.log('Smurf add success payload:')
-            console.log(action.payload)
             return {
                 ...state,
-                counter: state.counter + 1
+                counter: state.counter + 1,
+                smurfs: action.payload
             }
         case ADD_SMURF_FAILURE:
             return {
