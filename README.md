@@ -24,10 +24,30 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
+
+It removes the need for prop drilling, meaning components that do not need the state do not have to pass them through from parent to children components.
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+actions are the defined "actions" that can be performed on state by an app.
+
+reducers translate actions across the app state, modifying the state.
+
+store is a central "store" of the application's state. If data is in the store, it IS the true state of the app at that time.
+
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is the state of the overall application. It will often be used by multiple components.
+
+Component state is state that is local to a particular component and not available in other components. Form state is a good example, where you perform validation on form inputs before translating them to application state on form submission.
+
 4. Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+redux-thunk allows us to handle state asyncronously, which is especially useful for api calls. It allows action creators to return functions instead of just actions.
+
 5. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+So far I have enjoyed regular redux the most. While it has some downsides when it comes to the amount of overhead from boilerplate/helper functions you need to create in order to get everything connected, the end result is very modular, which I like. Once your component is connected to state, you can move it around and not have to worry about refactoring so many other components/etc. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
