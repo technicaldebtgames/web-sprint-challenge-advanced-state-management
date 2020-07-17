@@ -3,7 +3,7 @@ import './App.css';
 
 // Component(s)
 import SmurfList from './SmurfList';
-import SmurfForm from './SmurfForm';
+//import SmurfForm from './SmurfForm';
 
 class App extends Component {
 
@@ -15,7 +15,6 @@ class App extends Component {
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
         <SmurfList />
-        <SmurfForm />
       </div>
     );
   }

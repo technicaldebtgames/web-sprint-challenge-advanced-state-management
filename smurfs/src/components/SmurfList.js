@@ -27,7 +27,6 @@ const mapStateToProps = state => {
 
     return {
 
-        isLoading: state.isLoading,
         smurfs: state.smurfs,
         error: state.error
 

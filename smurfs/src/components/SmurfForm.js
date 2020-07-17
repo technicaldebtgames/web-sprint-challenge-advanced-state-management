@@ -10,7 +10,8 @@ const initialFormState = {
 
 const SmurfForm = props => {
 
-    const [formState, setFormState] = useState(initialFormState);
+    const [formState, setFormState] = useState({...initialFormState,
+                                                   id: props.counter});
 
     const handleChanges = event => {
 
@@ -49,8 +50,7 @@ const mapStateToProps = state => {
 
     return {
 
-        isLoading: state.isLoading,
-        error: state.error
+        counter: state.counter
 
     };
 
@@ -59,6 +59,6 @@ const mapStateToProps = state => {
 export default (
 
     mapStateToProps,
-    addSmurf
+    {addSmurf}
 
 )(SmurfForm);
